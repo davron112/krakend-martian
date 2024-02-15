@@ -8,14 +8,14 @@ import (
 	"os/signal"
 	"syscall"
 
+	gologging "github.com/davron112/krakend-gologging/v2"
+	martian "github.com/davron112/krakend-martian/v2"
+	viper "github.com/davron112/krakend-viper/v2"
+	"github.com/davron112/lura/v2/proxy"
+	krakendgin "github.com/davron112/lura/v2/router/gin"
+	"github.com/davron112/lura/v2/transport/http/client"
+	"github.com/davron112/lura/v2/transport/http/server"
 	"github.com/gin-gonic/gin"
-	gologging "github.com/krakendio/krakend-gologging/v2"
-	martian "github.com/krakendio/krakend-martian/v2"
-	viper "github.com/krakendio/krakend-viper/v2"
-	"github.com/luraproject/lura/v2/proxy"
-	krakendgin "github.com/luraproject/lura/v2/router/gin"
-	"github.com/luraproject/lura/v2/transport/http/client"
-	"github.com/luraproject/lura/v2/transport/http/server"
 )
 
 func main() {

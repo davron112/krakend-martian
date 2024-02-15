@@ -8,12 +8,13 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/luraproject/lura/v2/config"
-	"github.com/luraproject/lura/v2/logging"
-	"github.com/luraproject/lura/v2/proxy"
-	"github.com/luraproject/lura/v2/transport/http/client"
+	"github.com/davron112/lura/v2/config"
+	"github.com/davron112/lura/v2/logging"
+	"github.com/davron112/lura/v2/proxy"
+	"github.com/davron112/lura/v2/transport/http/client"
 
 	// import the required martian packages so they can be used
+	"github.com/davron112/krakend-martian/v2/header"
 	"github.com/google/martian"
 	_ "github.com/google/martian/body"
 	_ "github.com/google/martian/cookie"
@@ -26,7 +27,6 @@ import (
 	_ "github.com/google/martian/querystring"
 	_ "github.com/google/martian/stash"
 	_ "github.com/google/martian/status"
-	"github.com/krakendio/krakend-martian/v2/header"
 )
 
 // NewBackendFactory creates a proxy.BackendFactory with the martian request executor wrapping the injected one.
